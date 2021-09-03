@@ -48,15 +48,6 @@ class peakMerger:
     labels: list of strings of size (num experiments)
         The file names matching the columns (experiments) of
         the matrix attribute.
-
-    clustered: (ndarray of shape (num consensuses), ndarray of shape (num experiments))
-        Two arrays (first are the consensuses, second are the experiments).
-        Index of the cluster each sample belongs to.
-
-    embedding: (ndarray of shape (num consensuses, 2), ndarray of shape (num experiments, 2))
-        Two arrays (first are the consensuses, second are the experiments).
-        Position of the points in the UMAP 2D space.
-
     """
     def __init__(self, genomeFile, outputPath=None, scoreMethod="binary"):
         self.score = scoreMethod
@@ -74,8 +65,6 @@ class peakMerger:
                 l = l.rstrip("\n").split("\t")
                 self.chrLen[l[0]] = int(l[1])
                 self.genomeSize += int(l[1])    
-        self.embedding = [None, None]
-        self.clustered = [None, None]
         self.matrix = None
         self.consensuses = None
         self.labels = None
