@@ -307,8 +307,8 @@ class peakMerger:
         Write matrix, datasets names and consensuses genomic locations. 
         The matrix (consensuses, datasets) uses a sparse matrix market format 
         and is saved into "matrix.mtx".
-        The dataset names corresponding to the rows are saved in "datasets.txt"
-        The genomic locations associated to each consensus are located in "consensuses.bed"
+        The dataset names corresponding to the rows are saved in "datasets.txt".
+        The genomic locations associated to each consensus are located in "consensuses.bed".
 
         Parameters
         ----------
